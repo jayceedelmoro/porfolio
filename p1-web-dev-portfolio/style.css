@@ -1,0 +1,81 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* START DEFINING COLORS */
+
+.bg-black {
+    background-color: #000;
+}
+
+.text-blue {
+    color: #4873C0;
+}
+
+.text-white {
+    color: #FFF;
+}
+
+/* END DEFINING COLORS */
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    height: 100vh;
+}
+
+.hero .image-container {
+    position: absolute;
+    height: 90%;
+    width: 60%;
+    top: 5%;
+    left: 5vh;
+}
+
+.hero .image-container img {
+    opacity: 0.5;
+}
+
+.hero .text-container {
+    position: absolute;
+    height: 90%;
+    top: 5%;
+    left: 60%;
+}
+
+.hero .text-container h2 span:before {
+    content: "Web Developer";
+    display: block;
+    font-size: 60px;
+    line-height: 80px;
+    animation: fade infinite 6s;
+    -webkit-animation: fade infinite 6s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+    55% {
+        content: "Technical Person";
+        opacity: 1;
+    }
+    70% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
