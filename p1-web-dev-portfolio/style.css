@@ -2,26 +2,74 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+* {
     box-sizing: border-box;
     margin: 0;
 }
 
-/* START DEFINING COLORS */
+body {
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;;
+}
 
-.bg-black {
-    background-color: #000;
+/* -------------------- START ROOT -------------------- */
+
+:root {
+    --main-bg: #000;
+    --sub-bg: #121212;
+    --main-color: #4E6CA0;
+    --transition: all 0.3s ease-out;
+}
+
+/* -------------------- START ROOT -------------------- */
+
+/* -------------------- START DEFINING COLORS -------------------- */
+
+.bg-black-main {
+    background-color: var(--main-bg);
+}
+
+.bg-black-sub {
+    background-color: var(--sub-bg);
 }
 
 .text-blue {
-    color: #4873C0;
+    color: var(--main-color);
 }
 
-.text-white {
+/* -------------------- END DEFINING COLORS -------------------- */
+
+
+/* -------------------- START DEFINING FONTS -------------------- */
+
+.text-center {
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+.x-small {
+    font-size: 10px;
+}
+
+/* -------------------- END DEFINING FONTS -------------------- */
+
+
+/* -------------------- START GLOBAL STYLES -------------------- */
+
+a {
     color: #FFF;
 }
-
-/* END DEFINING COLORS */
 
 .flex {
     display: flex;
@@ -29,53 +77,137 @@ body {
     align-items: center;
 }
 
-.hero {
+.flex-column {
+    flex-direction: column;
+}
+
+section {
+    position: relative;
+    padding: 80px;
+}
+
+.section-title {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.section-title h2::before,
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    left: -40px;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 40px;
+    margin: 0 auto;
+}
+
+.section-title h2::after {
+    width: 20px;
+    left: 0px;
+    right: -40px;
+}
+
+/* -------------------- END GLOBAL STYLES -------------------- */
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    top: 0;
+    background: linear-gradient(360deg, rgba(0,0,0,0) 0%, rgba(45,45,42,1) 100%);
+    z-index: 2;
+}
+
+/* -------------------- START HERO -------------------- */
+
+#hero {
     height: 100vh;
 }
 
-.hero .image-container {
-    position: absolute;
-    height: 90%;
-    width: 60%;
-    top: 5%;
-    left: 5vh;
-}
-
-.hero .image-container img {
-    opacity: 0.5;
-}
-
-.hero .text-container {
-    position: absolute;
-    height: 90%;
-    top: 5%;
-    left: 60%;
-}
-
-.hero .text-container h2 span:before {
-    content: "Web Developer";
+#hero .text-container .text-change span::after {
+    content: "";
     display: block;
-    font-size: 60px;
-    line-height: 80px;
-    animation: fade infinite 6s;
-    -webkit-animation: fade infinite 6s;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .1em solid var(--main-color); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    animation:  changeText 6s infinite reverse,
+                typing 1.5s steps(40, end) infinite alternate,
+                blink-caret .75s step-end infinite;
 }
 
-@keyframes fade {
-    0% {
-        opacity: 1;
-    }
-    20% {
-        opacity: 0;
-    }
-    55% {
-        content: "Technical Person";
-        opacity: 1;
-    }
-    70% {
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+/* -------------------- END HERO -------------------- */
+
+
+/* -------------------- START ABOUT -------------------- */
+
+.about-container {
+    width: 50%;
+    padding: 20px;
 }
+
+.about-container.image img {
+    width: 100%;
+}
+
+/* -------------------- START ABOUT -------------------- */
+
+.arrow-down {
+    position: absolute;
+    bottom: 5%;
+}
+
+.arrow-down:hover i {
+    background: var(--main-bg);
+}
+
+.arrow-down i {
+    background: #FFFFFF50;
+    border-radius: 50%;
+    padding: 7px 8px;
+    transition: var(--transition);
+}
+
+#scroll-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+#scroll-to-top i {
+    background: var(--main-color);
+    padding: 12px 15px;
+}
+
+footer {
+    padding: 3px;
+}
+
+/* -------------------- START ANIMATION-------------------- */
+
+@keyframes changeText {
+    0% { content:"Web Developer"; }
+    30% { content:"Web Developer"; }
+    100% { content:"Technical Person"; }
+  }
+
+@keyframes typing {
+  0% { 
+    width: 0;
+ }
+  60% { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--main-color); }
+}
+
+/* -------------------- END ANIMATION -------------------- */

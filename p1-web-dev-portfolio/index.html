@@ -6,31 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jan Carlo Del Moro</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <main>
         <nav>
 
         </nav>
-        <section class="hero bg-black">
-            <div class="flex image-container">
-                <img 
-                    src="assets/Carlo.png"
-                    alt="Jan Carlo Del Moro"
-                >
+        <section id="hero" class="flex bg-black-main">
+            <div class="flex flex-column text-container">
+                <h1 class="uppercase">
+                    <span class="text-blue">Jan Carlo</span> Del Moro
+                </h1>
+                <div class="text-change">
+                        <p class="text-center">
+                            I'm a
+                            <span></span>
+                        </p>
+                </div>
             </div>
-            <div class="flex text-container text-white">
+            <div class="arrow-down flex">
+                <a href="#about">
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="bg-black-sub">
+            <div class="section-title text-center">
                 <h2>
-                    Jan Carlo Del Moro
-                    <span class="text-blue"></span>
+                    About
+                </h2>
+            </div>
+            <div class="about-content flex">
+                <div class="about-container image">
+                    <img
+                        src="assets/Carlo.jpg"
+                        alt="Jan Carlo Del Moro"
+                    >
+                </div>
+                <div class="about-container">
+                    asdasda
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="bg-black-main">
+            <div class="section-title text-center">
+                <h2>
+                    Services
                 </h2>
             </div>
         </section>
-        <section>
-            
-        </section>
-        <footer>
 
+        <section id="projects" class="bg-black-sub">
+            <div class="section-title text-center">
+                <h2>
+                    Projects
+                </h2>
+            </div>
+        </section>
+
+        <section id="About" class="bg-black-main">
+            <div class="section-title text-center">
+                <h2>
+                    About
+                </h2>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-black-sub">
+            <div class="section-title text-center">
+                <h2>
+                    Contact
+                </h2>
+            </div>
+        </section>
+
+        <div id="scroll-to-top">
+            <a href="#hero">
+                <i class="fa-solid fa-caret-up"></i>
+            </a>
+        </div>
+
+        <footer class="bg-black-sub">
+            <div>
+                <p class="text-center x-small">
+                    © 2022 Jan Carlo Del Moro
+                </p>
+            </div>
         </footer>
     </main>
 </body>
