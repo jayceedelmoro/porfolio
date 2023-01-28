@@ -9,7 +9,7 @@ html {
 
 body {
     color: #FFF;
-    font-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* -------------------- START ROOT -------------------- */
@@ -17,7 +17,7 @@ body {
 :root {
     --main-bg: #000;
     --sub-bg: #121212;
-    --main-color: #4E6CA0;
+    --main-color: #F8C60F;
     --transition: all 0.3s ease-out;
 }
 
@@ -143,22 +143,6 @@ nav {
                 blink-caret .75s step-end infinite;
 }
 
-/* -------------------- END HERO -------------------- */
-
-
-/* -------------------- START ABOUT -------------------- */
-
-.about-container {
-    width: 50%;
-    padding: 20px;
-}
-
-.about-container.image img {
-    width: 100%;
-}
-
-/* -------------------- START ABOUT -------------------- */
-
 .arrow-down {
     position: absolute;
     bottom: 5%;
@@ -174,6 +158,88 @@ nav {
     padding: 7px 8px;
     transition: var(--transition);
 }
+
+/* -------------------- END HERO -------------------- */
+
+
+/* -------------------- START ABOUT -------------------- */
+
+.about-container {
+    width: 50%;
+    padding: 20px;
+}
+
+.about-container.image img {
+    width: 100%;
+}
+
+/* -------------------- END ABOUT -------------------- */
+
+
+/* -------------------- START CONTACT -------------------- */
+
+.form-container {
+    width: 70%;
+    margin: auto;
+}
+
+.form-container form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.form-container form #email,
+.form-container form #message {
+    grid-column: span 2;
+}
+
+.form-container form * {
+    font-size: 14px;
+    padding: 15px 0;
+    color: #FFF;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #777;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-container form input:focus,
+.form-container form textarea:focus {
+    outline: none;
+    border-bottom: 1px solid #777;
+}
+
+.form-container form ::placeholder {
+    color: #FFFFFF90;
+}
+
+.form-container form button {
+    position: relative;
+    border-bottom: none;
+    font-weight: 600;
+    width: 40%;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+.form-container form button::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background: #2d7dd2;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: var(--transition);
+}
+
+.form-container form button:hover::before {
+    width: 100%;
+}
+
+/* -------------------- END CONTACT -------------------- */
 
 #scroll-to-top {
     position: fixed;
