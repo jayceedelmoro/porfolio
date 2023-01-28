@@ -18,6 +18,7 @@ body {
     --main-bg: #000;
     --sub-bg: #121212;
     --main-color: #F8C60F;
+    --sub-color: #2d7dd2;
     --transition: all 0.3s ease-out;
 }
 
@@ -111,6 +112,35 @@ section {
     right: -40px;
 }
 
+button {
+    position: relative;
+    min-width: 200px;
+    color: #FFF;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background: var(--sub-color);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: var(--transition);
+}
+
+button:hover::before {
+    width: 100%;
+}
+
 /* -------------------- END GLOBAL STYLES -------------------- */
 
 nav {
@@ -176,6 +206,66 @@ nav {
 /* -------------------- END ABOUT -------------------- */
 
 
+/* -------------------- START SKILLS -------------------- */
+
+.skill-set-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    padding: 0 10%;
+    margin-top: 60px;
+}
+
+.skills-set {
+    position: relative;
+    border: 1px solid #FFF;
+    top: 0;
+    transition: var(--transition);
+}
+
+.skills-set:hover {
+    top: -20px;
+}
+
+.skills-set .content {
+    padding: 10%;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.skills-set .icon-container {
+    width: 50px;
+    height: 50px;
+    background: var(--sub-color);
+    border-radius: 50%;
+}
+
+.skills-set .fa-brands {
+    font-size: 30px;
+}
+
+.skills-set .fa-brands:not(.fa-square-js) {
+    margin-top: 5px;
+}
+
+.skills-set .skill-text {
+    text-align: center;
+}
+
+.skills-set .skill-title {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+#skills .resume-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* -------------------- END SKILLS -------------------- */
+
+
 /* -------------------- START CONTACT -------------------- */
 
 .form-container {
@@ -215,28 +305,8 @@ nav {
 }
 
 .form-container form button {
-    position: relative;
     border-bottom: none;
-    font-weight: 600;
     width: 40%;
-    padding: 10px 0;
-    z-index: 1;
-}
-
-.form-container form button::before {
-    content: "";
-    position: absolute;
-    width: 30%;
-    height: 100%;
-    background: #2d7dd2;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: var(--transition);
-}
-
-.form-container form button:hover::before {
-    width: 100%;
 }
 
 /* -------------------- END CONTACT -------------------- */
@@ -248,7 +318,7 @@ nav {
 }
 
 #scroll-to-top i {
-    background: var(--main-color);
+    background: var(--sub-color);
     padding: 12px 15px;
 }
 
@@ -261,7 +331,7 @@ footer {
 @keyframes changeText {
     0% { content:"Web Developer"; }
     30% { content:"Web Developer"; }
-    100% { content:"Technical Person"; }
+    100% { content:"Tech Guy"; }
   }
 
 @keyframes typing {
