@@ -207,6 +207,14 @@ nav a.icon {
                 blink-caret .75s step-end infinite;
 }
 
+.social-container {
+    margin-top: 15px;
+}
+
+.social-container a {
+    margin: 0 10px;
+}
+
 .arrow-down {
     position: absolute;
     bottom: 5%;
