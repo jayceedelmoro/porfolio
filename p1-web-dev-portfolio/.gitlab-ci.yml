@@ -7,7 +7,7 @@ deploy:
     name: production
     url: https://jancarlodelmoro.netlify.app
   only:
-    - p1-web-dev-portfolio
+    - main
   script:
     - npm i
     # your build command
