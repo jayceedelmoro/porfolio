@@ -5,9 +5,9 @@ deploy:
   stage: deploy
   environment:
     name: production
-    url: https://jancarlodelmoro.netlify.app/
+    url: https://jancarlodelmoro.netlify.app
   only:
-    - master
+    - p1-web-dev-portfolio
   script:
     - npm i
     # your build command
