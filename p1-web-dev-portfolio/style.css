@@ -300,8 +300,8 @@ nav a.icon {
     font-size: 30px;
 }
 
-.skills-set .fa-brands:not(.fa-square-js) {
-    margin-top: 5px;
+.skills-set .fa-brands:nth-child(n+3) {
+    margin-top: -5px;
 }
 
 .skills-set .skill-text {
