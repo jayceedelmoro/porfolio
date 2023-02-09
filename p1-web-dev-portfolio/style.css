@@ -162,6 +162,10 @@ nav {
     z-index: 2;
 }
 
+nav .logo img:hover {
+    cursor: pointer;
+}
+
 nav .nav-menu {
     justify-content: flex-end;
     width: 85%;
