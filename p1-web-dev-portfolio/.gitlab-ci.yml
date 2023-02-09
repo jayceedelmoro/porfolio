@@ -5,7 +5,7 @@ deploy:
   stage: deploy
   environment:
     name: production
-    url: https://jancarlodelmoro.netlify.app/
+    url: https://jancarlodelmoro.netlify.app
   only:
     - master
   script:
