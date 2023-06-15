@@ -54,7 +54,7 @@ body {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 5.5em;
 }
 
 h2 {
@@ -198,16 +198,21 @@ nav a.icon {
     background-size: cover;
 }
 
+#hero .text-container {
+    position: absolute;
+    top: 44%;
+}
+
 #hero .text-container .text-change span::after {
     content: "";
     display: block;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .1em solid var(--main-color); /* The typwriter cursor */
+    border-right: .1em solid var(--main-color); /* The typewriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto;
-    font-size: 30px;
+    margin: -10px auto 0;
+    font-size: 40px;
     font-weight: 600;
-    line-height: 40px;
+    line-height: 50px;
     animation:  changeText 9s infinite reverse,
                 typing 1.5s steps(40, end) infinite alternate,
                 blink-caret .75s step-end infinite;
@@ -256,6 +261,7 @@ nav a.icon {
 .about-container.image img {
     width: 80%;
     border-radius: 50%;
+    box-shadow: 1px 1px 10px #1e1e1e;
 }
 
 .about-container.text {
@@ -315,6 +321,10 @@ nav a.icon {
 
 .skills-set .fa-brands {
     font-size: 30px;
+}
+
+.skills-set img {
+    width: 45px;
 }
 
 .skills-set .fa-brands:nth-child(n+3) {
