@@ -399,7 +399,7 @@ nav a.icon {
     transform: scale(1);
 }
 
-.project-description a {
+.project-description a:last-child {
     margin-top: 20px;
     color: var(--sub-color);
     font-weight: 600;
