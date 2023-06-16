@@ -24,7 +24,17 @@ body {
     --transition: all 0.3s ease-out;
 }
 
-/* -------------------- START ROOT -------------------- */
+/* :root section {
+    
+  animation-play-state: paused;
+  
+  animation-delay: calc(var(--scroll) * -1s);
+  
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+} */
+
+/* -------------------- END ROOT -------------------- */
 
 /* -------------------- START DEFINING COLORS -------------------- */
 
@@ -88,9 +98,27 @@ a {
     flex-direction: column;
 }
 
+main {
+    background: #000;
+}
+
 section {
-    position: relative;
+    position: sticky;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent !important;
     padding: 80px;
+    top:0;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+#loom-companion-mv3 {
+    display: none;
+}
+
+.sectionTranstion {
+    opacity: 1;
 }
 
 .section-title {
@@ -351,7 +379,7 @@ nav a.icon {
 
 .project-container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     grid-gap: 30px;
     padding: 0 10%;
     margin-top: 60px;
