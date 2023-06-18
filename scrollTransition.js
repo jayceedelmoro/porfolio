@@ -1,10 +1,16 @@
 
 
 const scroll = (x, y) => {
-    window.scrollTo( x, y );
+    let scrollY = 0;
+
+    for(let count = 0; count < y; count++) {
+        scrollY += section[count].offsetHeight;
+    }
+
+    return window.scrollTo( x, scrollY + 25 );
 }
 
-scroll( 0,0 );
+scroll( 0, 0 );
 
 const section = document.querySelectorAll( 'section' );
 const logo = document.querySelector( '.logo' );
@@ -15,15 +21,25 @@ const projects = document.querySelector( '.nav-menu-item.projects' );
 const contact = document.querySelector( '.nav-menu-item.contact' );
 const scrollToTop = document.getElementById( 'scroll-to-top' );
 
-const clientHeight = document.documentElement.clientHeight;
+const scrollToElem = (num) => {
+    let scrollY = 0;
 
-logo.onclick = function() {scroll( 0,0 )};
-home.onclick = function() {scroll( 0,0 )};
-about.onclick = function() {scroll( 0, clientHeight )};
-skills.onclick = function() {scroll( 0, clientHeight * 2 )};
-projects.onclick = function() {scroll( 0, clientHeight * 3 )};
-contact.onclick = function() {scroll( 0, clientHeight * 4 )};
-scrollToTop.onclick = function() {scroll(0,0)};
+    for(let count = 0; count < num; count++) {
+        scrollY += section[i].offsetHeight;
+    }
+
+    return scrollY;
+}
+
+// const clientHeight = document.documentElement.clientHeight;
+
+logo.onclick = function() {scroll( 0, 0 )};
+home.onclick = function() {scroll(0, 0)};
+about.onclick = function() {scroll( 0, 1 )};
+skills.onclick = function() {scroll( 0, 2 )};
+projects.onclick = function() {scroll( 0, 3 )};
+contact.onclick = function() {scroll( 0, 4 )};
+scrollToTop.onclick = function() {scroll(0, 0)};
 
 section[0].classList.add('sectionTranstion');
 
