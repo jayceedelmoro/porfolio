@@ -24,16 +24,6 @@ body {
     --transition: all 0.3s ease-out;
 }
 
-/* :root section {
-    
-  animation-play-state: paused;
-  
-  animation-delay: calc(var(--scroll) * -1s);
-  
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-} */
-
 /* -------------------- END ROOT -------------------- */
 
 /* -------------------- START DEFINING COLORS -------------------- */
@@ -109,16 +99,11 @@ section {
     background-color: transparent !important;
     padding: 80px;
     top:0;
-    opacity: 0;
     transition: var(--transition);
 }
 
 #loom-companion-mv3 {
     display: none;
-}
-
-.sectionTranstion {
-    opacity: 1;
 }
 
 .section-title {
@@ -226,7 +211,6 @@ nav a.icon {
 /* -------------------- START HERO -------------------- */
 
 #hero {
-    height: 100vh;
     background: url('assets/Jan Carlo Background.jpg');
     background-size: cover;
 }
@@ -530,6 +514,7 @@ footer {
 @media only screen and (max-width: 991px) {
     section {
         padding: 40px;
+        padding-top: 80px;
     }
 
     #hero {

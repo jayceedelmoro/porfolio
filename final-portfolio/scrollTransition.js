@@ -30,17 +30,18 @@ section[0].classList.add('sectionTranstion');
 document.addEventListener('scroll', () => {
 
     section.forEach((s, index) => {
-        let elemY = s.getBoundingClientRect().y;
-        let elemHeight = s.getBoundingClientRect().height;
-
-        if (clientHeight > elemY + elemHeight * 2/3) {
-            s.classList.add('sectionTranstion');
-        }
-
-            let nextElemY = section[ index + 1 ].getBoundingClientRect().y;
-            let nextElemHeight = section[ index + 1 ].getBoundingClientRect().height;
-            if(nextElemY + nextElemHeight * 1/5 < clientHeight ) {
-                s.classList.remove('sectionTranstion');
+        if( index < section.length - 1 ) {
+            let elementHeight = s.offsetHeight;
+            let scrollTop = document.documentElement.scrollTop;
+            
+            if (section[ index + 1 ].getBoundingClientRect().top <= elementHeight) {
+                s.style.opacity = 1 - ((scrollTop - ( elementHeight *  index )) / elementHeight );
             }
+            else {
+                s.style.opacity = 1
+            }
+        }
     });
+
+    
 }, false);
