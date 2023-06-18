@@ -512,6 +512,10 @@ footer {
 
 /* ------------------------------ MOBILE ------------------------------ */
 @media only screen and (max-width: 991px) {
+    h1 {
+        text-align: center;
+    }
+
     section {
         padding: 40px;
         padding-top: 80px;
@@ -519,6 +523,18 @@ footer {
 
     #hero {
         background-position-x: center ;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-container {
+        width: initial;
+    }
+
+    .about-container.image {
+        width: 50%;
     }
 
     .about-container.image img,
