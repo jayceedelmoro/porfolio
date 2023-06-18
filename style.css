@@ -590,7 +590,7 @@ footer {
         width: 100%;
     }
 
-    nav .nav-menu-item a {
+    nav .nav-menu-item {
         display: block;
         color: var(--main-bg);
     }
