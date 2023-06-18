@@ -30,10 +30,14 @@ section[0].classList.add('sectionTranstion');
 document.addEventListener('scroll', () => {
 
     section.forEach((s, index) => {
+        let elementHeight = s.offsetHeight;
+        let scrollTop = document.documentElement.scrollTop;
+
+        if(elementHeight <= window.innerHeight) {
+            s.style.position = 'sticky';
+        }
+
         if( index < section.length - 1 ) {
-            let elementHeight = s.offsetHeight;
-            let scrollTop = document.documentElement.scrollTop;
-            
             if (section[ index + 1 ].getBoundingClientRect().top <= elementHeight) {
                 s.style.opacity = 1 - ((scrollTop - ( elementHeight *  index )) / elementHeight );
             }

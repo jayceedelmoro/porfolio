@@ -93,12 +93,12 @@ main {
 }
 
 section {
-    position: sticky;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: transparent !important;
     padding: 80px;
     top:0;
+    overflow: hidden;
     transition: var(--transition);
 }
 
@@ -308,7 +308,7 @@ nav a.icon {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 30px;
-    padding: 0 10%;
+    padding: 0 5%;
     margin-top: 60px;
 }
 
@@ -366,13 +366,13 @@ nav a.icon {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 30px;
-    padding: 0 10%;
+    padding: 0 5%;
     margin-top: 60px;
 }
 
 .project-card {
     position: relative;
- padding-top: 100%;
+    padding-top: 100%;
 }
 
 .project-category {
@@ -429,7 +429,7 @@ nav a.icon {
 /* -------------------- START CONTACT -------------------- */
 
 .form-container {
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
