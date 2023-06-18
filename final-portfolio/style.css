@@ -209,12 +209,13 @@ nav .nav-menu-item {
     padding: 20px 15px;
 }
 
-nav .nav-menu-item a {
+nav .nav-menu-item {
     text-decoration: none;
+    cursor: pointer;
     transition: var(--transition);
 }
 
-nav .nav-menu-item a:hover {
+nav .nav-menu-item:hover {
     color: var(--sub-color)
 }
 
