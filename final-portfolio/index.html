@@ -10,8 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type = "text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type = "text/javascript" src="hamburger_menu_script.js" defer></script>
     <script type = "text/javascript" src="scrollTransition.js" defer></script>
+    <script type = "text/javascript" src="sendMessage.js" defer></script>
 </head>
 <body>
     <main>
@@ -335,7 +337,8 @@
                 </h2>
             </div>
             <div class="form-container">
-                <form>
+                <form id="contact-form">
+                    <input type="hidden" name="contact_number">
                     <input id="name" placeholder="Name" required>
                     <input id="subject" placeholder="Subject" required>
                     <input type="email" id="email" placeholder="Email" required>
