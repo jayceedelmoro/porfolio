@@ -593,10 +593,6 @@ footer {
         display: block;
         color: var(--main-bg);
     }
-
-    #hero {
-        height: 500px;
-    }
     
     #hero .text-container .text-change span::after {
         font-size: 23px;
