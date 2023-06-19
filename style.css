@@ -65,6 +65,10 @@ h3 {
     font-size: 30px;
 }
 
+.small {
+    font-size: 14px;
+}
+
 .x-small {
     font-size: 10px;
 }
@@ -483,7 +487,7 @@ nav a.icon {
 }
 
 footer {
-    padding: 3px;
+    padding: 5px;
 }
 
 /* -------------------- START ANIMATION-------------------- */
